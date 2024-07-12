@@ -1,11 +1,11 @@
-* {
+*{
     margin: 0;
     padding: 0%;
 }
 
 .main {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(images\glacier.jpg);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(../images/glacier.jpg);
     background-position: center;
     background-size: cover;
     height: 109vh;
@@ -62,10 +62,10 @@ ul li a {
     transition: 0.4s ease-in-out;
 }
 
+
 ul li a:hover {
     color: rgb(235, 5, 5);
 }
-
 .content {
     width: 1200px;
     height: auto;
