@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0%;
 }
@@ -30,20 +30,18 @@
     padding: 20px;
     float: left;
     padding-top: 10px;
-
 }
 
 .menu {
     width: 400px;
     float: left;
     height: 70px;
-
 }
 
 ul {
     float: left;
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -62,10 +60,10 @@ ul li a {
     transition: 0.4s ease-in-out;
 }
 
-
 ul li a:hover {
     color: rgb(235, 5, 5);
 }
+
 .content {
     width: 1200px;
     height: auto;
@@ -82,9 +80,19 @@ ul li a:hover {
     line-height: 30px;
 }
 
+/*.content h2{
+    font-family: "Times New Roman";
+    color: black;
+    font-size: 30px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}*/
+
 .content h1 {
-    font-family: 'Times New Roman';
-    font-size: 50px;
+    font-family: "Times New Roman";
+    font-size: 30px;
+    color: aliceblue;
     padding-left: 20px;
     margin-top: 9%;
     letter-spacing: 2px;
@@ -100,15 +108,57 @@ ul li a:hover {
     font-size: 18px;
     border-radius: 10px;
     cursor: pointer;
-    transition: .4s ease;
+    transition: 0.4s ease;
 }
 
 .content .cn a {
     text-decoration: none;
     color: black;
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .cn:hover {
     background-color: aliceblue;
+}
+
+/* Footer Styling */
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-us {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-us h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-us p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.contact-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us li {
+    margin-bottom: 10px;
+}
+
+.contact-us li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-us li a:hover {   
+    text-decoration: underline;
 }
