@@ -2,53 +2,120 @@
 <html lang="en">
 
 <head>
-
-    <title>Act4Climate</title>
-    <link rel="stylesheet" href="..\css_files\style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Crisis Awareness</title>
+    <link rel="stylesheet" href="../css_files/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="main">
-            <div class="navbar">
-                <div class="icon">
-                    <h2 class="logo">Act4Climate</h2>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Our Mission</a></li>
-                        <li><a href="#">Climate Crisis</a></li>
-                        <li><a href="#">Solutions</a></li>
-                        <li><a href="#">Knowledge Hub</a></li>
-                        <li><a href="#">Join us</a></li>
-                    </ul>   
-                </div>                
+        <nav>
+            <div class="container">
+                <h1 class="logo">Act4Climate</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#knowledge-hub">Knowledge Hub</a></li>
+                    <li><a href="#calculator">Carbon Footprint Calculator</a></li>
+                    <li><a href="#contributions">User Contributions</a></li>
+                    <li><a href="#map">Interactive Map</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
             </div>
-<br/>
-            <div class="content">
-                <h2>Take urgent action to combat climate change and its impacts</h2>
-                <p>The impacts of the climate crisis are profound and far-reaching. Rising temperatures contribute
-                    to more frequent and severe weather events, such as hurricanes, heatwaves, and droughts. Melting ice
-                    caps and glaciers are causing sea levels to rise, threatening coastal communities and ecosystems.
-                    Ocean acidification, a direct result of increased carbon dioxide absorption, is disrupting marine
-                    life and coral reefs.</p>
-            </div>
-        </div>
+        </nav>
     </header>
 
+    <section id="home" class="section">
+        <div class="container">
+            <h2>Welcome to Climate Awareness</h2>
+            <p>Learn about the climate crisis and how you can make a difference.</p>
+        </div>
+    </section>
+
+    <section id="knowledge-hub" class="section">
+        <div class="container">
+            <h2>Knowledge Hub</h2>
+            <p>Find resources and information about climate science, impacts, policy, and technology.</p>
+        </div>
+    </section>
+
+    <section id="calculator" class="section">
+        <div class="container">
+            <h2>Carbon Footprint Calculator</h2>
+            <div class="form-group">
+                <label for="electricity">Electricity Usage (kWh/month):</label>
+                <input type="number" id="electricity" placeholder="Enter kWh">
+            </div>
+            <div class="form-group">
+                <label for="gas">Natural Gas Usage (therms/month):</label>
+                <input type="number" id="gas" placeholder="Enter therms">
+            </div>
+            <div class="form-group">
+                <label for="car">Car Travel (miles/month):</label>
+                <input type="number" id="car" placeholder="Enter miles">
+            </div>
+            <div class="form-group">
+                <label for="flights">Flights (hours/year):</label>
+                <input type="number" id="flights" placeholder="Enter hours">
+            </div>
+            <button id="calculateButton">Calculate</button>
+            <div id="result"></div>
+        </div>
+    </section>
+
+    <section id="contributions" class="section">
+        <div class="container">
+            <h2>User Contributions</h2>
+            <form id="contributionForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="story">Your Story:</label>
+                    <textarea id="story" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="submittedStories">
+                <h3>Shared Stories</h3>
+                <!-- Submitted stories will appear here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="section">
+        <div class="container">
+            <h2>Interactive Map</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About</h2>
+            <p>Our mission is to work tirelessly towards reducing the impact of the climate crisis. 
+                We aim to find innovative solutions that will help mitigate the effects of global warming. 
+                By sharing our stories, we can inspire others to take action and make a positive difference. 
+                Together, we can contribute to a more sustainable future, where generations to come can enjoy a healthier and thriving planet.</p>
+        </div>
+    </section>
+
     <footer>
-        <div class="contact-us">
-            <h3>Contact Us</h3>
-            <p>Let's work together for a sustainable future. Reach out to us with your questions and ideas!</p>
-            <ul>
-                <li>Email: <a href="mailto:info@act4climate.org">info@act4climate.org</a></li>
-                <li>Phone: (123) 456-7890 (replace with your actual phone number)</li>
-            </ul>
+        <div class="container">
+            <p>&copy; 2024 Climate Awareness. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../Js_files/map.js"></script>
+    <script src="../Js_files/carbon_calc.js"></script>
 </body>
 
 </html>
