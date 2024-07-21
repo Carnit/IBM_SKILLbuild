@@ -4,12 +4,12 @@ var map = L.map('map').setView([0, 0], 2);
 
 // Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    subdomains: ['a', 'b', 'c']
 }).addTo(map);
 
 // OpenWeatherMap API Key
 var apiKey = 'af5b3b4c8a68afef6100bbb71df8abe2';
-
 // Function to fetch weather data
 async function getWeather(lat, lon) {
     var url = `https://api.openweathermap.org/data/2.5/weather` +
