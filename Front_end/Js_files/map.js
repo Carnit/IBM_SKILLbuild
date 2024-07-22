@@ -1,4 +1,5 @@
-
+// require('node_modules/dotenv').config(); 
+// const leaflet = require('https://unpkg.com/leaflet@1.9.3/dist/leaflet.js'); 
 // Initialize the map
 var map = L.map('map').setView([0, 0], 2);
 
@@ -9,7 +10,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // OpenWeatherMap API Key
-var apiKey = 'af5b3b4c8a68afef6100bbb71df8abe2';
+var apiKey = process.env.OPENWEATHERMAP_API_KEY;
 // Function to fetch weather data
 async function getWeather(lat, lon) {
     var url = `https://api.openweathermap.org/data/2.5/weather` +
