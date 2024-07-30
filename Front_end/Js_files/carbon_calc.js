@@ -1,9 +1,5 @@
-document.getElementById('calculateButton').addEventListener('click', function() {
-    const electricity = Number(document.getElementById('electricity').value);
-    const gas = Number(document.getElementById('gas').value);
-    const car = Number(document.getElementById('car').value);
-    const flights = Number(document.getElementById('flights').value);
-
+// Carbon footprint calculation logic
+function calculateEmissions(electricity, gas, car, flights) {
     const electricityFactor = 0.92;
     const gasFactor = 5.3;
     const carFactor = 0.411;
@@ -15,33 +11,26 @@ document.getElementById('calculateButton').addEventListener('click', function() 
     const flightsEmissions = flights * flightsFactor;
 
     const totalEmissions = electricityEmissions + gasEmissions + carEmissions + flightsEmissions;
+    return totalEmissions;
+}
 
+function updateResult(totalEmissions) {
     document.getElementById('result').innerHTML = `
-        <h3>Your Monthly Carbon Footprint</h3>
-        <p>Electricity: ${electricityEmissions.toFixed(2)} kg CO2</p>
-        <p>Natural Gas: ${gasEmissions.toFixed(2)} kg CO2</p>
-        <p>Car Travel: ${carEmissions.toFixed(2)} kg CO2</p>
-        <p>Flights: ${flightsEmissions.toFixed(2)} kg CO2</p>
-        <h3>Total: ${totalEmissions.toFixed(2)} kg CO2</h3>
-    `;
+    <h3>Your Monthly Carbon Footprint</h3>
+    <p>Electricity: ${totalEmissions.toFixed(2)} kg CO2</p>
+    <p>Natural Gas: ${gasEmissions.toFixed(2)} kg CO2</p> 
+    <p>Car Travel: ${carEmissions.toFixed(2)} kg CO2</p> 
+    <p>Flights: ${flightsEmissions.toFixed(2)} kg CO2</p> 
+    <h3>Total: ${totalEmissions.toFixed(2)} kg CO2</h3>
+  `;
+}
+
+document.getElementById('calculateButton').addEventListener('click', function () {
+    const electricity = document.getElementById('electricity').value;
+    const gas = document.getElementById('gas').value;
+    const car = document.getElementById('car').value;
+    const flights = document.getElementById('flights').value;
+
+    const totalEmissions = calculateEmissions(electricity, gas, car, flights);
+    updateResult(totalEmissions);
 });
-
-document.getElementById('contributionForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const story = document.getElementById('story').value;
-
-    const storyElement = document.createElement('div');
-    storyElement.classList.add('story');
-    storyElement.innerHTML = `
-        <h4>${name} (${email})</h4>
-        <p>${story}</p>
-    `;
-
-    document.getElementById('submittedStories').appendChild(storyElement);
-
-    document.getElementById('contributionForm').reset();
-});
-
