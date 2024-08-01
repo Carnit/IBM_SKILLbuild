@@ -4,112 +4,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Crisis Awareness</title>
-    <link rel="stylesheet" href="../css_files/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Knowledge Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #301934;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #c892f4;
+            color: black;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #fff 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        .content {
+            padding: 20px;
+            background: #a494f9;
+            color: #000;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            color: #001f3f;
+        }
+
+        .speech {
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #fff;
+        }
+
+        .speech img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .speech-content {
+            flex: 1;
+        }
+
+        .talk-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .talk-list li {
+            background: #FF4136;
+            color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .talk-list li:hover {
+            background: #85144b;
+        }
+
+        .talk-list li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #fdf9ff;
+            color: #000;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">Act4Climate</h1>
+        <div class="container">
+            <h1>Knowledge Hub</h1>
+            <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#knowledge-hub">Knowledge Hub</a></li>
-                    <li><a href="#calculator">Carbon Footprint Calculator</a></li>
-                    <li><a href="#contributions">User Contributions</a></li>
-                    <li><a href="#map">Interactive Map</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Knowledge Hub</a></li>
+                    <li><a href="stories.html">Contributions</a></li>    
+                    <li><a href="#speeches">Speeches</a></li>
+                    <li><a href="#fast-facts">Fast Facts</a></li>
+                    <li><a href="#tech-talks">Tech Talks</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
-    
-    <section id="knowledge-hub" class="section">
-        <div class="container">
-            <h2>Knowledge Hub</h2>
-            <p>Find resources and information about climate science, impacts, policy, and technology.</p>
-        </div>
-    </section>
 
-    <section id="calculator" class="section">
-        <div class="container">
-            <h2>Carbon Footprint Calculator</h2>
-            <div class="form-group">
-                <label for="electricity">Electricity Usage (kWh/month):</label>
-                <input type="number" id="electricity" placeholder="Enter kWh">
-            </div>
-            <div class="form-group">
-                <label for="gas">Natural Gas Usage (therms/month):</label>
-                <input type="number" id="gas" placeholder="Enter therms">
-            </div>
-            <div class="form-group">
-                <label for="car">Car Travel (miles/month):</label>
-                <input type="number" id="car" placeholder="Enter miles">
-            </div>
-            <div class="form-group">
-                <label for="flights">Flights (hours/year):</label>
-                <input type="number" id="flights" placeholder="Enter hours">
-            </div>
-            <button id="calculateButton">Calculate</button>
-            <div id="result"></div>
-        </div>
-    </section>
+    <div class="container">
+        <section id="speeches" class="content">
+            <h2>Speeches</h2>
 
-    <section id="contributions" class="section">
-        <div class="container">
-            <h2>User Contributions</h2>
-            <form id="contributionForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required>
+            <div class="speech">
+                <img src="https://i.ytimg.com/vi/u9KxE4Kv9A8/hqdefault.jpg" alt="">
+                <div class="speech-content">
+                    <h3>Greta Thunberg’s Climate Change Speech at the 2019 UN Climate Action Summit</h3>
+                    <p>In September 2019 climate activist Greta Thunberg addressed the U.N.’s Climate Action Summit in
+                        New York City with this inspiring climate change speech.</p>
+                    <p>“In 21 February 2019, she spoke at a conference of the European Economic and Social Committee and
+                        to European Commission chief Jean-Claude Juncker, where she said that to limit global warming to
+                        less than the two degrees C goal established at the Paris Agreement, the EU must reduce their CO
+                        2 emissions by 80% by 2030.”</p>
+                    <a href="#">Read more</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="story">Your Story:</label>
-                    <textarea id="story" rows="5" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-            <div id="submittedStories">
-                <h3>Shared Stories</h3>
-                <!-- Submitted stories will appear here -->
             </div>
-        </div>
-    </section>
 
-    <section id="map" class="section">
-        <div class="container">
-            <h2>Interactive Map</h2>
-            <div id="map"></div>
-        </div>
-    </section>
+            <div class="speech">
+                <img src="https://i.ytimg.com/vi/ka6_3TJcCkA/hqdefault.jpg" alt="">
+                <div class="speech-content">
+                    <h3>Leonardo DiCaprio’s Climate Change Speech at the 2014 UN Climate Summit</h3>
+                    <p>Leonardo DiCaprio gave an impassioned climate change speech at the 2014 UN Climate Summit.</p>
+                    <p>“Leonardo DiCaprio's speech on climate change - analysis In Leonardo DiCaprio's speech he gave
+                        back in 2014 as the United Nations Messenger of Peace, he illustrates the devastating effects of
+                        climate change to stress the fact that the present leaders, who just signed the Paris
+                        Agreement.”</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About</h2>
-            <p>Our mission is to work tirelessly towards reducing the impact of the climate crisis.
-                We aim to find innovative solutions that will help mitigate the effects of global warming.
-                By sharing our stories, we can inspire others to take action and make a positive difference.
-                Together, we can contribute to a more sustainable future, where generations to come can enjoy a
-                healthier and thriving planet.</p>
-        </div>
-    </section>
+            <div class="speech">
+                <img src="https://i.ytimg.com/vi/7SSXLIZkM3E/hqdefault.jpg" alt="">
+                <div class="speech-content">
+                    <h3>Yeb Sano’s Climate Change Speech at the United Nations Climate Summit in Warsaw</h3>
+                    <p>The Philippines’ lead negotiator Yeb Sano addressed the opening session of the UN climate summit
+                        in Warsaw in November 2013. In this emotional and powerful climate change speech he called for
+                        urgent action to prevent a repeat of the devastating storm that hit parts of the Philippines.
+                    </p>
+                    <p>“Sano's speech brought tears to other delegates and received a standing ovation. He discussed how
+                        the destructive storm could serve as a wake-up call for other countries to take immediate action
+                        to prevent future extreme weather events.”</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+
+            <p>Coming soon...</p>
+        </section>
+
+        <section id="fast-facts" class="content">
+            <h2>Fast Facts</h2>
+            <ul>
+                <li>The concentration of carbon dioxide (CO2) in our atmosphere, as of May 2022, is the highest it has
+                    been in human history.</li>
+                <li>2023 was the hottest year on record, with global temperatures 2.12 degrees F (1.18 degrees C) warmer
+                    than the 20th-century average.</li>
+                <li>As much as 20 percent of all global greenhouse gas emissions caused by humans are due to
+                    deforestation.</li>
+                <li>Tropical forests are effective at storing carbon and could provide at least a third of the
+                    mitigation action needed to prevent the worst climate change scenarios.</li>
+                <li>Scaling up natural climate solutions, such as restoring degraded forests, could create as many as 20
+                    million new jobs.</li>
+                <li>Average global temperatures in July 2023 were higher than any other month on record.</li>
+                <li>As many as 3.6 billion people live in areas highly vulnerable to climate change impacts.</li>
+                <li>Mangroves hold significant carbon stocks, and their destruction releases carbon into the atmosphere.
+                </li>
+                <li>Conserving ecosystems, like mangroves, can provide cost-effective flood protection benefits
+                    exceeding US$ 65 billion per year.</li>
+                <li>One hundred ninety-three countries and the European Union have ratified the 2015 Paris Agreement to
+                    limit global warming and adapt to climate change, including protecting nature.</li>
+            </ul>
+        </section>
+
+        <section id="tech-talks" class="content">
+            <h2>Tech Talks around Climate Change</h2>
+            <ul class="talk-list">
+                <li><a href="https://www.ted.com/talks/al_gore_the_case_for_optimism_on_climate_change">Al Gore: The
+                        Case for Optimism on Climate Change</a></li>
+                <li><a
+                        href="https://www.ted.com/talks/greta_thunberg_the_disarming_case_to_act_right_now_on_climate_change">Greta
+                        Thunberg: The Disarming Case to Act Right Now on Climate Change</a></li>
+                <li><a
+                        href="https://www.ted.com/talks/katherine_wilkinson_how_empowering_women_and_girls_can_help_stop_global_warming">Katherine
+                        Wilkinson: How Empowering Women and Girls Can Help Stop Global Warming</a></li>
+                <li><a
+                        href="https://www.ted.com/talks/johan_rockstrom_10_years_to_transform_the_future_of_humanity_or_destabilize_the_planet">Johan
+                        Rockström: 10 Years to Transform the Future of Humanity -- or Destabilize the Planet</a></li>
+                <li><a href="https://www.ted.com/talks/chad_frischmann_100_solutions_to_climate_change">Chad Frischmann:
+                        100 Solutions to Climate Change</a></li>
+            </ul>
+        </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Climate Awareness. All rights reserved.</p>
-        </div>
+        <p>Knowledge Hub &copy; 2024</p>
     </footer>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="../Js_files/map.js"></script>
-    <script src="../Js_files/carbon_calc.js"></script>
 </body>
 
 </html>

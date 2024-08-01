@@ -6,116 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Crisis Awareness</title>
     <link rel="stylesheet" href="../css_files/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+    <div class="header-bar">
+        This is your first step towards saving the climate
+    </div>
     <header>
         <nav>
-            <div class="container">
-                <h1 class="logo">Act4Climate</h1>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#knowledge-hub">Knowledge Hub</a></li>
-                    <li><a href="#calculator">Carbon Footprint Calculator</a></li>
-                    <li><a href="#contributions">User Contributions</a></li>
-                    <li><a href="#map">Interactive Map</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
+            <h1 class="logo">Act4Climate</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="knowledge-hub.html">Knowledge Hub</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+            </ul>
         </nav>
     </header>
 
     <section id="home" class="section">
         <div class="container">
-            <h2>Welcome to Climate Awareness</h2>
-            <p>Learn about the climate crisis and how you can make a difference.</p>
-        </div>
-    </section>
-
-    <section id="knowledge-hub" class="section">
-        <div class="container">
-            <h2>Knowledge Hub</h2>
-            <p>Find resources and information about climate science, impacts, policy, and technology.</p>
-        </div>
-    </section>
-
-    <section id="calculator" class="section">
-        <div class="container">
-            <h2>Carbon Footprint Calculator</h2>
-            <div class="form-group">
-                <label for="electricity">Electricity Usage (kWh/month):</label>
-                <input type="number" id="electricity" placeholder="Enter kWh">
+            <div class="content-box">
+                <h2>Welcome to Climate Awareness</h2>
+                <p>Climate change presents a fundamental threat to human health. It affects the physical environment as
+                    well as all aspects of both natural and human systems – including social and economic conditions. As
+                    climatic conditions change, more frequent and intensifying weather and climate events are observed,
+                    including storms, extreme heat, floods, droughts, and wildfires. These weather and climate hazards
+                    affect health both directly and indirectly, increasing the risk of deaths, noncommunicable diseases,
+                    the emergence and spread of infectious diseases, and health emergencies.</p>
             </div>
-            <div class="form-group">
-                <label for="gas">Natural Gas Usage (therms/month):</label>
-                <input type="number" id="gas" placeholder="Enter therms">
-            </div>
-            <div class="form-group">
-                <label for="car">Car Travel (miles/month):</label>
-                <input type="number" id="car" placeholder="Enter miles">
-            </div>
-            <div class="form-group">
-                <label for="flights">Flights (hours/year):</label>
-                <input type="number" id="flights" placeholder="Enter hours">
-            </div>
-            <button id="calculateButton">Calculate</button>
-            <div id="result"></div>
-        </div>
-    </section>
-
-    <section id="contributions" class="section">
-        <div class="container">
-            <h2>User Contributions</h2>
-            <form id="contributionForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="story">Your Story:</label>
-                    <textarea id="story" rows="5" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-            <div id="submittedStories">
-                <h3>Shared Stories</h3>
-                <!-- Submitted stories will appear here -->
-            </div>
-        </div>
-    </section>
-
-    <section id="map" class="section">
-        <div class="container">
-            <h2>Interactive Map</h2>
-            <div id="map"></div>
         </div>
     </section>
 
     <section id="about" class="section">
         <div class="container">
             <h2>About</h2>
-            <p>Our mission is to work tirelessly towards reducing the impact of the climate crisis. 
-                We aim to find innovative solutions that will help mitigate the effects of global warming. 
-                By sharing our stories, we can inspire others to take action and make a positive difference. 
-                Together, we can contribute to a more sustainable future, where generations to come can enjoy a healthier and thriving planet.</p>
+            <p>Our mission is to work tirelessly towards mitigating the devastating impacts of the climate crisis.
+                We are committed to discovering and implementing innovative solutions that effectively reduce greenhouse
+                gas emissions and protect our planet.
+                By sharing our knowledge, experiences, and successes, we aim to inspire and empower individuals and
+                communities to join the fight for a sustainable future.
+                Together, we can build a world where human prosperity coexists harmoniously with a healthy planet,
+                ensuring that future generations inherit a thriving and resilient Earth.</p>
         </div>
     </section>
 
-    <footer>
+    <footer id = "contact-us">
         <div class="container">
-            <p>&copy; 2024 Climate Awareness. All rights reserved.</p>
+            <p>Contact us at: info@knowledgehub.com</p>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="../Js_files/map.js"></script>
-    <script src="../Js_files/carbon_calc.js"></script>
 </body>
 
 </html>
