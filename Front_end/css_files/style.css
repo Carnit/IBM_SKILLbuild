@@ -160,3 +160,19 @@ button {
 button:hover {
     background-color: #3498db;
 }
+
+.story {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.story h3 {
+    margin-top: 0;
+}
+
+.story p {
+    margin: 10px 0;
+}
