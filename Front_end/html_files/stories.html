@@ -23,26 +23,26 @@
         </nav>
     </header>
 
-    <section id="contributionsForm" class="section">
-        <div class="container">
-            <h2>Submit Your Story</h2>
-            <form id="contributionForm" action="/submit-story" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="story">Your Story:</label>
-                    <textarea id="story" name="story" rows="5" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
+<section id="contributions" class="section">
+    <div class="container">
+        <h2>Submit Your Story</h2>
+        <form id="contributionForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="story">Your Story:</label>
+                <textarea id="story" name="story" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
 
     <footer id="contact-us">
         <div class="container">
@@ -50,6 +50,7 @@
         </div>
     </footer>
 
+    <script src="../js_files/stories.js"></script>
 </body>
 
 </html>

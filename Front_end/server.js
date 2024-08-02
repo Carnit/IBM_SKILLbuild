@@ -8,6 +8,7 @@ const port = 3000;
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Serve static files (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, 'html_files')));
@@ -37,7 +38,7 @@ app.get('/stories', async (req, res) => {
     const stories = await collection.find().toArray();
 
     // Send stories as a response
-    res.json(stories);
+    res.status(200).json(stories);
 });
 
 // Route to handle form submission
@@ -49,7 +50,9 @@ app.post('/submit-story', async (req, res) => {
 
     // Insert form data into the collection
     await collection.insertOne({ name, email, story });
-    res.send('Story submitted successfully');
+
+    // Send a success response
+    res.send({ success: true });
 });
 
 app.listen(port, () => {
